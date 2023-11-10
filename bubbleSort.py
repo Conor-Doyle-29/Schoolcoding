@@ -1,9 +1,17 @@
-myList = [85,85, 24, 63, 45, 17, 31, 96, 50]
-for outerIndex in range(len(myList)-1):
-    print(myList)
-    for index in range(len(myList)-1):
-        if myList[index]>myList[index+1]:
-            tempValue = myList[index]
-            myList[index]=myList[index+1]
-            myList[index+1]=tempValue
-print(myList)
+def isPrime(number):
+  for i in range(2, number):
+    if number % i == 0:
+      return False
+  return True
+
+ 
+
+for i in range(2, 1000):
+  result = isPrime(i)
+  if result == True:
+    print(i)
+
+ 
+
+number = int(input("Enter a number: "))
+print("This number is prime:", isPrime(number))
